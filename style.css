@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+    --color-bg: hsl(0, 0%, 100);
+    --color-font: hsl(240, 6%, 21);
+    --color-bg-buttons: hsl(240, 9%, 89%);
+    --color-bg-buttons-active: hsl(194, 94%, 32%);
+    --color-img-buttons-active: hsl(0, 0%, 99%);
+}
+
+html.dark{
+    --color-bg: hsl(0, 2%, 9%);
+    --color-font: hsl(184, 92%, 65%);
+    --color-bg-buttons: hsl(182, 93%, 58%);
+    --color-bg-buttons-active: hsl(0, 0%, 26%);
+}
+
+html.dark .ph-moon,
+html:not(.dark) .ph-sun{
+    display: none;
+}
+
+html.running .ph-play-circle,
+html:not(.running) .ph-pause-circle{
+    display: none;
+}
+
+#toogleMode{
+    position: absolute;
+    top: 3.2rem;
+    right: 3.2rem;
+    
+    font-size: 4rem;
+    color: var(--color-font);
+    
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+#toogleMode:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    
+    background-color: var(--color-bg);
+}
+
+
+#page{
+    display: flex;
+    gap: 19.2rem;
+}
+
+#timer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 9rem; 
+    font-weight: 500;
+    color: var(--color-font);
+    
+}
+
+#controles{
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+#controles button{
+    align-items: center;
+    font-size: 5rem;
+    background: transparent;
+    color: var(--color-font);
+    
+    border: none;
+    cursor: pointer;
+}
+
+#sons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+#sons button{
+    font-size: 4.8rem;
+    padding: 4rem;
+    
+    border-radius: 2.4rem;
+    border: none;
+    
+    background-color: var(--color-bg-buttons);
+    cursor: pointer;
+    }
+    
+#sons button:hover{
+    background-color: var(--color-bg-buttons-active);
+    color: var(--color-img-buttons-active);
+    
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+
+
+/*-------- DESIGN DO BOTÃO DE AUDIO ATIVADO --------- */
+    
+html.activeNature #sons .ph-tree-evergreen{
+    background-color: var(--color-bg-buttons-active);
+    color: var(--color-img-buttons-active);
+    transform: scale(1.1);
+}
+html.activeRain #sons .ph-cloud-rain{
+    background-color: var(--color-bg-buttons-active);
+    color: var(--color-img-buttons-active);
+    transform: scale(1.1);
+}
+html.activeCoffe #sons .ph-storefront{
+    background-color: var(--color-bg-buttons-active);
+    color: var(--color-img-buttons-active);
+    transform: scale(1.1);
+}
+html.activeCampfire #sons .ph-campfire{
+    background-color: var(--color-bg-buttons-active);
+    color: var(--color-img-buttons-active);
+    transform: scale(1.1);
+}
+

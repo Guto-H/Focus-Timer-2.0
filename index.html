@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <title>Focus Timer 2.0</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <script src="./main.js" type="module" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <button id="toogleMode">
+        <i class="ph ph-sun"></i>
+        <i class="ph ph-moon"></i>
+    </button>
+    
+
+    <main id="page">
+        <section id="timer">
+            <div class="time">
+                <span id="minutos">00</span>
+                <span>:</span>
+                <span id="segundos">00</span>
+            </div>
+
+            <div id="controles">
+                <button>
+                    <i class="ph ph-play-circle" data-action="playPauseTimer"></i>
+                    <i class="ph ph-pause-circle" data-action="playPauseTimer"></i>
+                </button>
+                <button class="ph ph-stop-circle" data-action="resetTimer"></i></button>
+                <button class="ph ph-plus-circle" data-action="plusTimer"></i></button>
+                <button class="ph ph-minus-circle" data-action="minusTimer"></i></button>
+
+            </div>
+        </section>
+
+        <section id="sons">
+            <button class="ph ph-tree-evergreen" data-action="playAudioNatureza"></button>
+            <button class="ph ph-cloud-rain" data-action="playAudioChuva"></button>
+            <button class="ph ph-storefront" data-action="playAudioCafeteria"></button>
+            <button class="ph ph-campfire" data-action="playAudioLareira"></button>
+        </section>
+    </main>
+    
+</body>
+</html>
